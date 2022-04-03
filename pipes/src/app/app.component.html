@@ -75,8 +75,8 @@
       <label><b>Kilometers</b></label>
       <div>
         <!--Title Case Pipe-->
-        <div *ngIf="miles > 10">
-          {{ miles | convert: 'km' }}
+        <div>
+          {{ miles | convert: 'km' | number: '1.0-2' }}
       </div>
     </div>
   </div>
