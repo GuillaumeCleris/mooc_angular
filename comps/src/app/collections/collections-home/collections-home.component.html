@@ -1,2 +1,28 @@
 <app-divider></app-divider>
 <app-table classNames="striped celled" [data]="data" [headers]="headers"></app-table>
+
+<app-divider>Tab Meny</app-divider>
+<div class="ui grid">
+    <div class="four wide column">
+      <div class="ui vertical fluid tabular menu">
+        <a 
+            class="item" 
+            routerLink="./" 
+            routerLikeActive="active"
+        >
+          Biography
+        </a>
+        <a class="item" routerLink="./companies" routerLikeActive="active">
+            Companies
+        </a>
+        <a class="item" routerLink="./partners" routerLikeActive="active">
+            Partners
+        </a>
+      </div>
+    </div>
+    <div class="twelve wide stretched column">
+      <div class="ui segment">
+        <router-outlet></router-outlet>
+    </div>
+    </div>
+  </div>
