@@ -14,7 +14,7 @@ export class DateFormControl extends FormControl {
             return;
         }
         if (value.length > 5){
-            super.setValue(value, {...options, emitModelToViewChange:true});     
+            super.setValue(this.value, {...options, emitModelToViewChange:true});     
             return;
         }
 
