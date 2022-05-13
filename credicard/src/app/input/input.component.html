@@ -1,7 +1,11 @@
 <div class="field">
     <label class="label">{{label}}</label>
     <div class="control">
-        <input class="input" [formControl]="control" [ngClass]="{ 'is-danger': showErrors()}" />
+        <input 
+            mask="SSSS SSSS"
+            class="input" 
+            [formControl]="control" 
+            [ngClass]="{ 'is-danger': showErrors()}" />
     </div>
     <ng-container 
         *ngIf="
