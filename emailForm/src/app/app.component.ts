@@ -13,4 +13,8 @@ export class AppComponent {
     this.email += 'a';
   }, 1000);
   }*/
+
+  onSubmit() {
+    console.log(this.email);
+  }
 }
