@@ -15,6 +15,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.authService.checkAuth();
+    this.authService.checkAuth().subscribe(() => {});
   }
 }
