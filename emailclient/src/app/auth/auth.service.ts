@@ -16,6 +16,16 @@ interface SignupResponse {
   username: string;
 }
 
+interface SigninCredentials {
+  username: string;
+  password: string;
+}
+
+interface SigninResponse {
+  username: string;
+}
+
+
 interface SignedinResponse {
   authenticated: boolean;
   username: string;
@@ -65,4 +75,17 @@ export class AuthService {
       })
     );
   }
+
+  signin(credentials: SigninCredentials){
+    return this.http
+    .post<SigninResponse>(
+      this.rootUrl+'/auth/signin',
+      credentials)
+      .pipe(
+      tap(() => {
+        this.signedin$.next(true);
+      })
+    );
+  }
+
 }
